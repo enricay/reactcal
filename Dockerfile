@@ -17,7 +17,7 @@ COPY . /app
 RUN npm run build
 
 # Production stage base image
-FROM nginx:stable-alpine AS production-stage
+FROM nginx:1.26.1-alpine3.19 AS production-stage
 
 # Replace Nginx configuration
 RUN rm -rf /etc/nginx/conf.d
